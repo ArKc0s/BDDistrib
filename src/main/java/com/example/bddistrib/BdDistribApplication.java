@@ -24,7 +24,7 @@ public class BdDistribApplication implements CommandLineRunner {
 
         if(itemRepository.count() == 0) {
             System.out.println("Importing CSV data");
-            csvImportService.importerCSV("src/main/resources/products.csv");
+            csvImportService.importerCSV("src/main/resources/products-insa.csv");
         }
     }
 }
