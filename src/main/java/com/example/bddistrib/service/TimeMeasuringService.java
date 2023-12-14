@@ -20,4 +20,8 @@ public class TimeMeasuringService {
         long endTime = System.currentTimeMillis();
         return (endTime - startTime);
     }
+
+    public long getRows() {
+        return itemRepository.count();
+    }
 }

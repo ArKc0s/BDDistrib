@@ -15,7 +15,7 @@ public class TimeMeasuringController {
 
     @GetMapping("/find/all")
     public String getTime() {
-        return "Time to find all items: " + timeMeasuringService.measureTime() + " ms";
+        return "Time to find all items (" + timeMeasuringService.getRows() + ") : " + timeMeasuringService.measureTime() + " ms";
     }
 
 }
