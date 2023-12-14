@@ -15,7 +15,11 @@ public class TimeMeasuringController {
 
     @GetMapping("/find/all")
     public String getTime() {
-        return "Time to find all items (" + timeMeasuringService.getRows() + ") : " + timeMeasuringService.measureTime() + " ms";
+        String line1 = "Time to find all items (" + timeMeasuringService.getRows() + ") : " + timeMeasuringService.measureTimeForAll() + " ms";
+        String line2 = "Time to find all items from France (" + timeMeasuringService.getRowsFr() + ") : " + timeMeasuringService.measureTimeForFr() + " ms";
+        String line3 = "Time to find all items from Great Britain (" + timeMeasuringService.getRowsGb() + ") : " + timeMeasuringService.measureTimeForGB() + " ms";
+
+        return line1 + "<br>" + line2 + "<br>" + line3;
     }
 
 }
